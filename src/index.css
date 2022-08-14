@@ -1,13 +1,141 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #D6EFED;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 40%;
+  padding: 20px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: #80558C;
+  padding: 10px;
+  color: #fff
+}
+
+.todo-list {
+  /* height: 100%; */
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.new-task {
+  background-color: #80558C;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+
+.new-task:active {
+  background-color: #55315e;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  place-items: center;
+}
+
+.modal-content {
+  width: 40%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+form > input {
+  font-size: 1rem;
+  padding: 2px
+}
+
+.add-task {
+  background-color: #80558C;
+  align-self: center;
+  color: #fff;
+}
+
+.add-task:active {
+  background-color: #55315e;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0
+}
+
+.close-modal:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.trash {
+  width: 20px;
+  cursor: pointer;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  /* flex: 1; */
+  overflow-y: scroll;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.task-completed {
+  font-style: italic;
+  text-decoration: line-through;
 }
